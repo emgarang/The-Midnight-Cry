@@ -33,7 +33,10 @@ jobs:
 
       - name: Install dependencies
         run: make install
-
+        
+      - name: Lint and auto-fix code
+        run: make lint-fix
+        
       - name: Build Site
         run: make build
 
