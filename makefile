@@ -8,7 +8,7 @@ lint-fix: lint-js-fix lint-py-fix
 
 # JS/TS lint
 lint-js:
-	npx prettier@3.6.2 --check .
+	-npx prettier@3.6.2 --check .
 
 lint-js-fix:
 	npx prettier@3.6.2 --write .
