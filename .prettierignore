@@ -1,0 +1,14 @@
+# Ignore node modules
+node_modules/
+
+# Ignore build output
+dist/
+build/
+.out/
+
+# Ignore minified / bundled files
+*.min.js
+*.bundle.js
+
+# Optionally ignore GitHub workflows
+.github/workflows/*.yml
