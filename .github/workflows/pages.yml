@@ -1,4 +1,4 @@
-name: Build and Lint
+name: Deploy to Pages
 
 on:
   push:
