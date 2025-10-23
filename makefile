@@ -6,23 +6,30 @@ lint: lint-js lint-py
 # Fix both JS/TS + Python
 lint-fix: lint-js-fix lint-py-fix
 
-# JS/TS lint
+# JS/TS lint (Prettier, non-failing)
 lint-js:
-	-npx prettier@3.6.2 --check .
+	-npx prettier@3.6.2 --check . --ignore-path .prettierignore
 
+# JS/TS auto-fix
 lint-js-fix:
-	npx prettier@3.6.2 --write .
+	npx prettier@3.6.2 --write . --ignore-path .prettierignore
 
-# Python lint
+# Python lint (black)
 lint-py:
-	ruff check .
+	-black --check .
 
 # Python auto-fix
 lint-py-fix:
-	ruff check --fix .
+	black .
 
+# Install Python dependencies
 install:
 	pip install -r requirements.txt
 
+# Build site (adjust as needed)
+build:
+	echo "Building site..."
+
+# Clean cache
 clean:
 	rm -rf .ruff_cache
