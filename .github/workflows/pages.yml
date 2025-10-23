@@ -21,20 +21,22 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
+      
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v6
         with:
           python-version: '3.13'
 
       - name: Install dependencies
         run: make install
 
-      - name: Build site
+      - name: Build Site
         run: make build
 
       - name: Configure Pages

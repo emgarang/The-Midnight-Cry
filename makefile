@@ -23,8 +23,5 @@ lint-py-fix:
 install:
 	pip install -r requirements.txt
 
-build:
-	python render.py
-
 clean:
 	rm -rf .ruff_cache
