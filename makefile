@@ -13,13 +13,6 @@ lint-js:
 lint-js-fix:
 	npx prettier@3.6.2 --write .
 
-#Python lint
-lint-py:
-	pipx run --spec ruff==0.13.3 ruff check .
-
-lint-py-fix:
-	pipx run --spec ruff==0.13.3 ruff check . --fix
-
 install:
 	pip install -r requirements.txt
 
