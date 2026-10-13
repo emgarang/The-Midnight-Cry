@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -114,7 +114,9 @@ a {
   font-weight: 600;
   padding: 0.4rem 0.5rem;
   border-radius: 0.45rem;
-  transition: color 180ms ease, background-color 180ms ease;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
 .nav-links a:hover,
@@ -155,7 +157,10 @@ a {
   border-radius: 0.65rem;
   padding: 0.66rem 1rem;
   border: 1px solid transparent;
-  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
 }
 
 .btn:hover {
@@ -267,7 +272,9 @@ h1 {
 .card,
 .resource-card {
   padding: 1rem;
-  transition: transform 180ms ease, border-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
 }
 
 .card:hover,
@@ -429,7 +436,7 @@ textarea {
 }
 
 @media (max-width: 899px) {
-  .nav-links[data-open="true"] {
+  .nav-links[data-open='true'] {
     display: grid;
     position: absolute;
     left: 4vw;
