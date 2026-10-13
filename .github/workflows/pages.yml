@@ -39,15 +39,19 @@ jobs:
         run: make build
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+        continue-on-error: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outcome == 'success'
         with:
           path: "."
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        if: steps.pages.outcome == 'success'
